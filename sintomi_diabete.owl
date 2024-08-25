@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#"
+     xml:base="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_sintomo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_sintomo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#aumento_fame -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#aumento_fame">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#perdita_peso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#perdita_peso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#poliuria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#poliuria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#prurito -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#prurito">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sete">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#stanchezza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#stanchezza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#vista_offuscata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#vista_offuscata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_aumento_fame -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_aumento_fame">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#aumento_fame"/>
+        <descrizione_sintomo>La polifagia, o aumento della fame, è un sintomo caratterizzato da un desiderio insolitamente elevato di mangiare, spesso accompagnato da un aumento dell&apos;assunzione di cibo. Questo sintomo può manifestarsi nonostante un apporto calorico sufficiente o anche eccessivo e può essere associato a diverse condizioni mediche, psicologiche o comportamentali.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_perdita_peso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_perdita_peso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#perdita_peso"/>
+        <descrizione_sintomo>Questo fenomeno è caratterizzato da una diminuzione significativa del peso corporeo senza un cambiamento intenzionale nell&apos;alimentazione o nei livelli di attività fisica, e talvolta anche in presenza di un aumento dell&apos;assunzione calorica.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_poliuria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_poliuria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#poliuria"/>
+        <descrizione_sintomo>La poliuria è un sintomo caratterizzato da un aumento anomalo della produzione di urina. Tecnicamente, viene definita come l&apos;escrezione di oltre 2,5-3 litri di urina al giorno in un adulto. In condizioni normali, un adulto urina circa 1-2 litri al giorno, quindi la poliuria rappresenta un aumento significativo di questo volume.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_prurito -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_prurito">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#prurito"/>
+        <descrizione_sintomo>Il prurito è una sensazione sgradevole che induce la necessità di grattarsi. È un sintomo comune che può essere causato da una vasta gamma di condizioni, che vanno da irritazioni della pelle a malattie sistemiche. Il prurito può essere localizzato in una specifica area del corpo o generalizzato, coinvolgendo più zone o l&apos;intero corpo.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_sete -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_sete">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sete"/>
+        <descrizione_sintomo>L&apos;aumento della sete, noto come polidipsia, è uno dei sintomi principali del diabete ed è caratterizzato da una sensazione di sete persistente e intensa che non si placa facilmente, anche bevendo grandi quantità di liquidi.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_stanchezza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_stanchezza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#stanchezza"/>
+        <descrizione_sintomo>La stanchezza, nota anche come affaticamento, è una sensazione di esaurimento fisico, mentale o emozionale che può variare da una lieve sensazione di sonnolenza a un&apos;esauriente mancanza di energia che interferisce con le attività quotidiane.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_vista_offuscata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_vista_offuscata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#vista_offuscata"/>
+        <descrizione_sintomo>La vista offuscata è un sintomo visivo comune che si manifesta come una perdita di chiarezza o nitidezza nella visione. Le persone con vista offuscata possono percepire oggetti, persone o scritte come sfocati, indistinti o difficili da mettere a fuoco. Questo sintomo può essere temporaneo o persistente, e può interessare uno o entrambi gli occhi.</descrizione_sintomo>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
