@@ -157,7 +157,7 @@ class esperto_diabete(KnowledgeEngine):
 
         r1 = self._prototype_ask_symptom("Ti senti molto assetato di solito (sopratutto di notte) ? [si/no]", Fact(sete="si"))
         r2 = self._prototype_ask_symptom("Ti senti molto stanco? [si/no]", Fact(stanchezza="si"))
-        r3 = self._prototype_ask_symptom("Stai perdendo peso e massa muscolare? [si/no]", Fact(perdita_peso="si"))
+        r3 = self._prototype_ask_symptom("Stai perdendo peso e massa muscolare? [si/no]", Fact(perdità_peso="si"))
         r4 = self._prototype_ask_symptom("Senti prurito? [si/no]", Fact(prurito="si"))
         r5 = self._prototype_ask_symptom("Hai la vista offuscata? [si/no]", Fact(vista_offuscata="si"))
         r6 = self._prototype_ask_symptom("Consumi spesso bevande/alimenti zuccherati? [si/no]", Fact(bevande_zuccherate="si"))
@@ -208,14 +208,14 @@ class esperto_diabete(KnowledgeEngine):
         self.declare(Fact(chiedi_esami_glicemia="si"))
 
 
-    @Rule(AND(Fact(sete="si"), Fact(stanchezza="si"), Fact(perdita_peso="si"), Fact(prurito="si"), Fact(vista_offuscata="si"), Fact(bevande_zuccherate="si"), Fact(fame_costante="si"), Fact(poliuria="si")))
+    @Rule(AND(Fact(sete="si"), Fact(stanchezza="si"), Fact(perdità_peso="si"), Fact(prurito="si"), Fact(vista_offuscata="si"), Fact(bevande_zuccherate="si"), Fact(fame_costante="si"), Fact(poliuria="si")))
     def all_diabetes_symptoms(self):
         print("Sembra che tu abbia TUTTI i sintomi del diabete")
         self.declare(Fact(tutti_sintomi="si"))
         self.declare(Fact(chiedi_esami_glicemia="si"))
         
 
-    @Rule(AND(Fact(sete="si"), Fact(stanchezza="si"), Fact(perdita_peso="si"), Fact(prurito="si"), Fact(vista_offuscata="si"), Fact(bevande_zuccherate="si"), Fact(fame_costante="si"), Fact(poliuria="si")), Fact(glicemia_digiuno_alta="si"), Fact(glicemia_casuale_alta="si"))
+    @Rule(AND(Fact(sete="si"), Fact(stanchezza="si"), Fact(perdità_peso="si"), Fact(prurito="si"), Fact(vista_offuscata="si"), Fact(bevande_zuccherate="si"), Fact(fame_costante="si"), Fact(poliuria="si")), Fact(glicemia_digiuno_alta="si"), Fact(glicemia_casuale_alta="si"))
     def all_diabetes_diagnosis_3(self):
         print(Fore.RED + "Hai sicuramente il diabete")
         reset_color()
@@ -234,7 +234,7 @@ class esperto_diabete(KnowledgeEngine):
         print(Fore.GREEN + "La glicemia e' nella norma")
         reset_color()
 
-    @Rule(NOT(AND(Fact(sete="si"),Fact(stanchezza="si"),Fact(perdita_peso="si"),Fact(prurito="si"),Fact(vista_offuscata="si"),Fact(bevande_zuccherate="si"),Fact(fame_costante="si"),Fact(poliuria="si"))))
+    @Rule(NOT(AND(Fact(sete="si"),Fact(stanchezza="si"),Fact(perdità_peso="si"),Fact(prurito="si"),Fact(vista_offuscata="si"),Fact(bevande_zuccherate="si"),Fact(fame_costante="si"),Fact(poliuria="si"))))
     def not_symptoms(self):
 
         if self.number_prints == 0 and self.flag_no_symptoms == 1:
@@ -261,7 +261,7 @@ def main_agent():
     expert_agent.print_facts()
 
 
-def main_ontology():
+def main_ontology_sintomi():
     do = diabetes_ontology()
 
     do.get_symptoms_descriptions()
@@ -271,10 +271,41 @@ def main_ontology():
     symptom_number = int(input())
 
     while symptom_number not in symptoms.keys():
-        print("\nSeleziona il sintomo di cui vuoi conosere la descrizione, inserisci il numero del sintomo")
+        print("\nSeleziona il sintomo di cui vuoi conosere la descrizione, inserisci il numero del sintomo:")
         symptom_number = int(input())
             
     print("Sintomo: %s, descrizione: %s"%(keys_symptoms[symptom_number]," ".join(symptoms[symptom_number])))
+
+
+def main_ontology_malattie_correlate():
+    do = diabetes_ontology()
+
+    do.get_malattie_correlate_descriptions()
+    malattie, keys_malattie_correlate = do.print_malattie_correlate()
+
+    print("\nSeleziona la malattia correlata di cui vuoi conosere la descrizione, inserisci il numero della malattia")
+    malattie_number = int(input())
+
+    while malattie_number not in malattie.keys():
+        print("\nSeleziona la malattia correlata di cui vuoi conosere la descrizione, inserisci il numero della malattia:")
+        malattie_number = int(input())
+            
+    print("Malattia: %s, descrizione: %s"%(keys_malattie_correlate[malattie_number]," ".join(malattie[malattie_number])))
+
+
+
+def trattamenti_malattie():
+    do = diabetes_ontology()
+
+    
+    print("\nScrivi il nome della malattia correlata di cui vuoi sapere i possibili trattamenti :")
+   
+    do.trattamenti()
+
+    #while trattamenti not in :
+       # print("\nScrivi il nome della malattia correlata di cui vuoi sapere i possibili trattamenti")
+        #trattamenti = int(input())
+
 
 
 
@@ -285,7 +316,7 @@ if __name__ == '__main__':
     print("Benvenuto in Esperto Diabete, un sistema esperto per la diagnosi del diabete")
     while exit_program == False:
 
-        print("----------->MENU<-----------\n[1] Mostra i possibili sintomi del diabete\n[2] Esegui una diagnosi\n[3] Esci")
+        print("----------->MENU<-----------\n[1] Mostra i possibili sintomi del diabete\n[2] Esegui una diagnosi\n[3] Mostra le malattie correlate\n[4] Trattamenti possibili di malattie correlate\n[5] Esci")
         user_choose = None
 
         try:
@@ -296,10 +327,17 @@ if __name__ == '__main__':
             exit_program = True
 
         if user_choose == 1:
-            main_ontology()
+            main_ontology_sintomi()
 
         elif user_choose == 2:
             main_agent()
+        
+        elif user_choose == 3:
+           main_ontology_malattie_correlate()
+        
+        elif user_choose == 4:
+            
+            trattamenti_malattie()
         
         else:
             print("Uscita dal programma...")

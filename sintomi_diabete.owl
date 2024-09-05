@@ -21,10 +21,28 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_malattie_correlate -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_malattie_correlate">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_sintomo -->
 
     <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_sintomo">
         <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_trattamento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#descrizione_trattamento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_gastroparesi"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
     
@@ -41,6 +59,30 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#alzheimer_demenza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#alzheimer_demenza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#apnea_sonno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#apnea_sonno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#arteriopatia_periferica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#arteriopatia_periferica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#aumento_fame -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#aumento_fame">
@@ -49,10 +91,120 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#chetoacidosi_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#chetoacidosi_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#depressione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#depressione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#disfunzione_erettile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#disfunzione_erettile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#ferite_durature -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#ferite_durature">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#gastroparesi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#gastroparesi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#glaucoma_cataratta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#glaucoma_cataratta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#infezioni_frequenti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#infezioni_frequenti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#intorpidimento_corpo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#intorpidimento_corpo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_cardiovascolari -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_cardiovascolari">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_pelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_pelle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#nefropatia_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#nefropatia_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#neuropatia_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#neuropatia_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#perdita_peso -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#perdita_peso">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#piede_diabetico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#piede_diabetico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
     </owl:Class>
     
 
@@ -73,10 +225,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#retinopatia_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#retinopatia_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sete -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sete">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sindrome_ovaio_policistico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sindrome_ovaio_policistico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
     </owl:Class>
     
 
@@ -91,6 +259,134 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#stanchezza">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sintomo_diabete"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#steatosi_epatica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#steatosi_epatica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_correlate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_alzheimer_demenza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_alzheimer_demenza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#alzheimer_demenza"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_apnea_sonno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_apnea_sonno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#apnea_sonno"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_arteriopatia_periferica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_arteriopatia_periferica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#arteriopatia_periferica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_depressione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_depressione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#depressione"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_disfunzione_erettile -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_disfunzione_erettile">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#disfunzione_erettile"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_gastroparesi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_gastroparesi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#gastroparesi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_glaucoma_cataratta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_glaucoma_cataratta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#glaucoma_cataratta"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_malattie_cardiovascolari -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_malattie_cardiovascolari">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_cardiovascolari"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_malattie_pelle -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_malattie_pelle">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_pelle"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_nefropatia_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_nefropatia_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#nefropatia_diabetica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_neuropatia_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_neuropatia_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#neuropatia_diabetica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_piede_diabetico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_piede_diabetico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#piede_diabetico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_retinopatia_diabetica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_retinopatia_diabetica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#retinopatia_diabetica"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_sindrome_ovaio_policistico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_sindrome_ovaio_policistico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sindrome_ovaio_policistico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_steatosi_epatica -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_steatosi_epatica">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#steatosi_epatica"/>
     </owl:Class>
     
 
@@ -114,6 +410,33 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_alzheimer_demenza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_alzheimer_demenza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#alzheimer_demenza"/>
+        <descrizione_malattie_correlate>Alcune ricerche hanno trovato una correlazione tra il diabete e un rischio aumentato di malattie neurodegenerative come l&apos;Alzheimer. L’iperglicemia cronica può contribuire a danni cerebrali e alla perdita di funzioni cognitive.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_apnea_sonno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_apnea_sonno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#apnea_sonno"/>
+        <descrizione_malattie_correlate>L&apos;apnea ostruttiva del sonno, un disturbo in cui la respirazione si interrompe temporaneamente durante il sonno, è più comune tra le persone con diabete di tipo 2. L&apos;apnea del sonno può aggravare il controllo della glicemia e aumentare il rischio di malattie cardiovascolari.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_arteriopatia_periferica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_arteriopatia_periferica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#arteriopatia_periferica"/>
+        <descrizione_malattie_correlate>Questa condizione si verifica quando le arterie che forniscono sangue alle estremità, come le gambe, si restringono a causa dell&apos;aterosclerosi. Può causare dolore alle gambe durante la camminata (claudicatio) e, nei casi gravi, può portare a ulcere non cicatrizzanti e amputazioni.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_aumento_fame -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_aumento_fame">
@@ -123,11 +446,131 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_chetoacidosi_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_chetoacidosi_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#chetoacidosi_diabetica"/>
+        <descrizione_sintomo>l&apos;organismo può produrre chetoni a causa della mancanza di insulina, causando nausea, vomito, dolori addominali e alito dall&apos;odore fruttato.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_depressione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_depressione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#depressione"/>
+        <descrizione_malattie_correlate>Il diabete è associato a un aumento del rischio di disturbi dell&apos;umore, spesso a causa delle sfide legate alla gestione della malattia cronica.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_disfunzione_erettile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_disfunzione_erettile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#disfunzione_erettile"/>
+        <descrizione_malattie_correlate>Molti uomini con diabete sviluppano difficoltà nell&apos;erezione a causa di danni ai nervi e ai vasi sanguigni.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_ferite_durature -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_ferite_durature">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#ferite_durature"/>
+        <descrizione_sintomo>sono una manifestazione comune in alcune condizioni mediche croniche, come il diabete. Questo fenomeno si riferisce alla difficoltà o all&apos;inefficienza dell&apos;organismo nel riparare i tessuti danneggiati, portando a un prolungamento del processo di guarigione rispetto a quello normale.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_gastroparesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_gastroparesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#gastroparesi"/>
+        <descrizione_malattie_correlate>Un rallentamento della digestione dovuto a danni ai nervi che controllano lo stomaco.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_glaucoma_cataratta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_glaucoma_cataratta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#glaucoma_cataratta"/>
+        <descrizione_malattie_correlate>Le persone con diabete hanno un rischio maggiore di sviluppare glaucoma, una malattia dell’occhio che aumenta la pressione oculare, e cataratta, un&apos;opacizzazione del cristallino dell’occhio che compromette la vista.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_infezioni_frequenti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_infezioni_frequenti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#infezioni_frequenti"/>
+        <descrizione_sintomo>Si riferiscono alla tendenza a sviluppare infezioni in modo ricorrente o persistente. In alcune condizioni mediche, come il diabete, queste infezioni possono diventare più comuni a causa di una compromessa funzione del sistema immunitario o di altri fattori correlati. Le infezioni frequenti sono spesso un segnale di una ridotta capacità dell’organismo di combattere efficacemente i patogeni come batteri, virus e funghi.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_intorpidimento_corpo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_intorpidimento_corpo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#intorpidimento_corpo"/>
+        <descrizione_sintomo>è una sensazione anormale che può manifestarsi in diverse forme, come una sensazione di prurito, pizzicore, bruciore, o addirittura una ridotta percezione del tatto. Questa condizione è spesso associata a problemi con i nervi, e nel contesto del diabete, è principalmente collegata a una complicazione chiamata neuropatia diabetica.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_malattie_cardiovascolari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_malattie_cardiovascolari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_cardiovascolari"/>
+        <descrizione_malattie_correlate>Cardiopatia ischemica: Il diabete aumenta il rischio di malattie cardiache, tra cui l&apos;infarto miocardico.
+Ictus: Il rischio di ictus è significativamente più alto nei diabetici.
+Ipertensione: Molti pazienti con diabete sviluppano ipertensione, che può aggravare il rischio di malattie cardiovascolari.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_malattie_pelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_malattie_pelle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#malattie_pelle"/>
+        <descrizione_malattie_correlate>Infezioni: Le persone con diabete sono più suscettibili a infezioni della pelle, come micosi, ascessi, e infezioni batteriche.
+Dermopatia diabetica: Lesioni cutanee, spesso sulle gambe, causate da cambiamenti nei piccoli vasi sanguigni.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_nefropatia_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_nefropatia_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#nefropatia_diabetica"/>
+        <descrizione_malattie_correlate>Il diabete è una delle principali cause di insufficienza renale cronica, che può richiedere la dialisi o un trapianto di rene.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_neuropatia_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_neuropatia_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#neuropatia_diabetica"/>
+        <descrizione_malattie_correlate>Danni ai nervi, in particolare negli arti inferiori, che possono portare a perdita di sensibilità, dolore e ulcere.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_perdita_peso -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_perdita_peso">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#perdita_peso"/>
         <descrizione_sintomo>Questo fenomeno è caratterizzato da una diminuzione significativa del peso corporeo senza un cambiamento intenzionale nell&apos;alimentazione o nei livelli di attività fisica, e talvolta anche in presenza di un aumento dell&apos;assunzione calorica.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_piede_diabetico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_piede_diabetico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#piede_diabetico"/>
+        <descrizione_malattie_correlate>Ulcere e infezioni: Le lesioni ai piedi possono guarire lentamente o non guarire affatto, portando a infezioni gravi. Nei casi più estremi, può essere necessaria l&apos;amputazione.</descrizione_malattie_correlate>
     </owl:NamedIndividual>
     
 
@@ -150,6 +593,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_retinopatia_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_retinopatia_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#retinopatia_diabetica"/>
+        <descrizione_malattie_correlate>Il diabete può danneggiare i vasi sanguigni della retina, portando a una progressiva perdita della vista e, nei casi più gravi, alla cecità.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_sete -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_sete">
@@ -159,11 +611,169 @@
     
 
 
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_sindrome_ovaio_policistico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_sindrome_ovaio_policistico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#sindrome_ovaio_policistico"/>
+        <descrizione_malattie_correlate>Il diabete di tipo 2 è correlato alla sindrome dell’ovaio policistico, una condizione comune nelle donne caratterizzata da squilibri ormonali che possono influenzare la fertilità. Le donne con PCOS hanno una maggiore predisposizione al diabete a causa dell&apos;insulino-resistenza.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_stanchezza -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_stanchezza">
         <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#stanchezza"/>
         <descrizione_sintomo>La stanchezza, nota anche come affaticamento, è una sensazione di esaurimento fisico, mentale o emozionale che può variare da una lieve sensazione di sonnolenza a un&apos;esauriente mancanza di energia che interferisce con le attività quotidiane.</descrizione_sintomo>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_steatosi_epatica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_steatosi_epatica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#steatosi_epatica"/>
+        <descrizione_malattie_correlate>Il diabete di tipo 2 è associato alla steatosi epatica non alcolica, una condizione in cui si accumula grasso nel fegato, aumentando il rischio di infiammazione epatica e, in alcuni casi, di cirrosi epatica.</descrizione_malattie_correlate>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_alzheimer_demenza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_alzheimer_demenza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_alzheimer_demenza"/>
+        <descrizione_trattamento>Terapie farmacologiche:I farmaci disponibili per l&apos;Alzheimer e la demenza mirano a ridurre i sintomi e rallentare il declino cognitivo, soprattutto nelle fasi iniziali e moderate della malattia.Inibitori della colinesterasi: Questi farmaci aumentano i livelli di acetilcolina, un neurotrasmettitore coinvolto nella memoria e nel pensiero. Sono spesso utilizzati nelle fasi iniziali e moderate dell&apos;Alzheimer. Farmaci per i sintomi comportamentali: Nei pazienti con Alzheimer e demenza, i sintomi comportamentali e psicologici come agitazione, aggressività, depressione, ansia e allucinazioni sono comuni. Per gestirli, possono essere prescritti:Antidepressivi: per trattare la depressione e l&apos;ansia (es. sertralina, citalopram).Antipsicotici: in casi gravi di agitazione o psicosi, possono essere usati antipsicotici come risperidone o olanzapina, ma questi farmaci devono essere somministrati con cautela, poiché possono aumentare il rischio di eventi avversi come ictus. Ansiolitici: farmaci come le benzodiazepine (ad es. lorazepam) possono essere usati a breve termine per ridurre l&apos;ansia e migliorare il sonno.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_apnea_sonno -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_apnea_sonno">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_apnea_sonno"/>
+        <descrizione_trattamento>Modifiche nello stile di vita: Spesso, le prime raccomandazioni per il trattamento dell&apos;apnea ostruttiva del sonno includono cambiamenti nello stile di vita, in quanto possono migliorare significativamente i sintomi, specialmente nei casi lievi o moderati. Perdita di peso: Ridurre il peso corporeo può migliorare o eliminare l&apos;apnea del sonno in molte persone, soprattutto se il sovrappeso o l&apos;obesità sono un fattore contribuitivo. Evitare l&apos;alcol e i sedativi: L&apos;alcol e i farmaci sedativi rilassano i muscoli della gola, peggiorando il collasso delle vie aeree durante il sonno. Smettere di fumare: Il fumo aumenta l&apos;infiammazione e la ritenzione di liquidi nelle vie aeree superiori, peggiorando l&apos;apnea del sonno. Dormire su un fianco: Dormire supini (sulla schiena) può peggiorare l&apos;apnea del sonno, in quanto la lingua e il palato molle possono collassare verso la parte posteriore della gola. Dormire su un fianco può ridurre il rischio di ostruzione delle vie aeree.Interventi chirurgici: In alcuni casi, quando le altre terapie non funzionano o non sono adatte, può essere indicato un intervento chirurgico. L&apos;obiettivo della chirurgia è aumentare lo spazio nelle vie aeree superiori.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_arteriopatia_periferica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_arteriopatia_periferica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_arteriopatia_periferica"/>
+        <descrizione_trattamento>Modifiche nello stile di vita: Cambiamenti nello stile di vita sono il primo passo per gestire l’arteriopatia periferica e possono rallentare la progressione della malattia, migliorare i sintomi e ridurre il rischio di complicanze cardiovascolari. Smettere di fumare: Il fumo è uno dei principali fattori di rischio per la PAD. Smettere di fumare è fondamentale per rallentare la progressione della malattia e migliorare la circolazione. Dieta sana per il cuore: Una dieta ricca di frutta, verdura, cereali integrali, pesce e oli sani, con un ridotto consumo di grassi saturi e trans, può aiutare a migliorare i livelli di colesterolo e la salute cardiovascolare. Esercizio fisico: Un programma di esercizio fisico supervisionato, in particolare il camminare, è un trattamento molto efficace per la PAD. Camminare a intervalli di 30-45 minuti per tre o più volte alla settimana può aiutare a migliorare la tolleranza allo sforzo e ridurre i sintomi di claudicatio intermittente (dolore alle gambe durante l&apos;esercizio). Farmaci:Il trattamento farmacologico per l&apos;arteriopatia periferica si concentra sia sulla gestione dei sintomi che sulla prevenzione di complicazioni come infarti e ictus.Antipiastrinici:Aspirina o clopidogrel (Plavix) sono prescritti per ridurre il rischio di formazione di coaguli di sangue e prevenire eventi cardiovascolari come infarti e ictus.Statine: Farmaci per abbassare il colesterolo, come atorvastatina o simvastatina, sono prescritti per ridurre i livelli di colesterolo LDL (&quot;cattivo&quot;) e rallentare la progressione dell&apos;aterosclerosi. Le statine riducono anche il rischio di complicanze cardiovascolari.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_depressione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_depressione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_depressione"/>
+        <descrizione_trattamento>Terapie farmacologiche: I farmaci antidepressivi sono comunemente usati per trattare la depressione. Ci sono diversi tipi di antidepressivi, e la scelta dipende dal profilo del paziente, dai sintomi specifici e dagli effetti collaterali.Inibitori selettivi della ricaptazione della serotonina (SSRI): Sono gli antidepressivi più prescritti grazie alla loro relativa sicurezza e tollerabilità. Terapie psicologiche. Le psicoterapie, spesso in combinazione con i farmaci, sono fondamentali per trattare la depressione. Modifiche nello stile di vita Cambiamenti nello stile di vita possono essere utili per migliorare il benessere e ridurre i sintomi depressivi: Attività fisica regolare: L’esercizio fisico è noto per migliorare l&apos;umore grazie al rilascio di endorfine. Anche una camminata di 30 minuti al giorno può avere un impatto positivo sulla salute mentale. Dieta equilibrata: Un’alimentazione ricca di nutrienti, come acidi grassi omega-3, vitamine e minerali, può supportare la salute del cervello. Evitare l’alcol e ridurre il consumo di zuccheri raffinati può anche contribuire al miglioramento dell&apos;umore.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_disfunzione_erettile -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_disfunzione_erettile">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_disfunzione_erettile"/>
+        <descrizione_trattamento>Trattamenti farmacologici Gli inibitori della fosfodiesterasi di tipo 5 (PDE5) sono i farmaci di prima linea più comuni per il trattamento della disfunzione erettile. Questi farmaci migliorano il flusso di sangue al pene quando c’è stimolazione sessuale. Terapia psicologica Se la disfunzione erettile ha cause psicologiche (ad es. ansia da prestazione, depressione, stress), la terapia psicologica può essere molto efficace.
+Interventi chirurgici .Se nessuna delle opzioni precedenti è efficace, si può considerare la chirurgia, particolarmente in casi gravi o di disfunzione erettile resistente ai trattamenti.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_gastroparesi -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_gastroparesi">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_gastroparesi"/>
+        <descrizione_trattamento>Modifiche dietetiche:L&apos;approccio più immediato alla gestione della gastroparesi è la modifica della dieta per facilitare la digestione e ridurre i sintomi come nausea, vomito e gonfiore.Terapie farmacologiche:Alcuni farmaci possono aiutare a migliorare la motilità dello stomaco o alleviare i sintomi della gastroparesi. Questi farmaci possono essere prescritti dal medico in base alla gravità dei sintomi.Gestione del diabete:
+Se la gastroparesi è causata o aggravata dal diabete, è essenziale migliorare il controllo dei livelli di glucosio nel sangue. L&apos;iperglicemia può peggiorare la motilità gastrica, quindi mantenere livelli stabili di zucchero nel sangue può aiutare a ridurre i sintomi.Terapie non farmacologiche: Oltre ai farmaci e alle modifiche dietetiche, ci sono altre opzioni terapeutiche che possono aiutare a gestire la gastroparesi. Interventi chirurgici: Nei casi più gravi di gastroparesi che non rispondono ad altre forme di trattamento, possono essere considerati interventi chirurgici.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_glaucoma_cataratta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_glaucoma_cataratta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_glaucoma_cataratta"/>
+        <descrizione_trattamento>Trattamenti farmacologici. I farmaci sono solitamente il primo approccio per ridurre la pressione intraoculare. Trattamenti laser. I trattamenti laser sono usati sia per ridurre la produzione di liquido intraoculare sia per migliorare il drenaggio. Interventi chirurgici. Se i farmaci e i trattamenti laser non sono sufficienti a controllare il glaucoma, si può considerare un intervento chirurgico. La cataratta si verifica quando il cristallino dell&apos;occhio diventa opaco, causando visione offuscata. L&apos;unico trattamento efficace per la cataratta è la chirurgia, che rimuove il cristallino opacizzato e lo sostituisce con una lente intraoculare artificiale.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_malattie_cardiovascolari -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_malattie_cardiovascolari">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_malattie_cardiovascolari"/>
+        <descrizione_trattamento>Farmaci. Il trattamento farmacologico è una componente fondamentale nella gestione delle malattie cardiovascolari, soprattutto per controllare i fattori di rischio e prevenire complicazioni. Procedure mediche e interventi chirurgici.Quando i farmaci e i cambiamenti dello stile di vita non sono sufficienti, possono essere necessari interventi chirurgici o procedure mediche. Riabilitazione cardiaca. La riabilitazione cardiaca è un programma supervisionato che combina esercizi fisici, educazione alla salute e supporto psicologico per aiutare i pazienti a migliorare la salute del cuore dopo un evento cardiaco, come un infarto, o in caso di insufficienza cardiaca.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_malattie_pelle -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_malattie_pelle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_malattie_pelle"/>
+        <descrizione_trattamento>Trattamenti Topici. I trattamenti topici vengono applicati direttamente sulla pelle e sono spesso il primo approccio terapeutico. Trattamenti Orali. Quando i trattamenti topici non sono sufficienti, o quando la condizione è più grave o diffusa, si possono utilizzare farmaci orali. Fototerapia.La fototerapia utilizza la luce ultravioletta (UV) per trattare varie malattie della pelle. Trattamenti Chirurgici e Laser In alcuni casi, è necessario rimuovere lesioni cutanee o trattare determinate condizioni attraverso interventi chirurgici o l&apos;uso di laser.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_nefropatia_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_nefropatia_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_nefropatia_diabetica"/>
+        <descrizione_trattamento>Controllo del Diabete. Glicemia: Mantenere i livelli di zucchero nel sangue il più possibile vicino alla norma è cruciale. Questo può essere raggiunto attraverso l&apos;uso di farmaci antidiabetici, insulina e monitoraggio regolare della glicemia. Dieta: Seguire un piano alimentare equilibrato e a basso contenuto di carboidrati può aiutare a controllare i livelli di zucchero nel sangue. Controllo e Monitoraggio: Esami regolari: Monitorare regolarmente la funzione renale tramite esami del sangue e delle urine per valutare la progressione della malattia e l&apos;efficacia del trattamento. Visite specialistiche: Consultare regolarmente un nefrologo (specialista dei reni) per la gestione della nefropatia diabetica.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_neuropatia_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_neuropatia_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_neuropatia_diabetica"/>
+        <descrizione_trattamento>Controllo del Diabete. Glicemia: Mantenere i livelli di zucchero nel sangue il più possibile vicino alla norma è fondamentale per prevenire e rallentare la progressione della neuropatia. Utilizzare farmaci antidiabetici come insulina o farmaci orali per il diabete. Monitoraggio: Misurare regolarmente la glicemia e fare aggiustamenti al piano di trattamento in base ai risultati. Approcci Complementari. Agopuntura: Alcuni studi suggeriscono che l&apos;agopuntura può aiutare a ridurre il dolore neuropatico in alcuni pazienti. Supplementi: Alcuni integratori, come l&apos;acido alfa-lipoico e la vitamina B12, possono avere effetti benefici sulla neuropatia, ma è importante discuterne con un medico.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_piede_diabetico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_piede_diabetico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_piede_diabetico"/>
+        <descrizione_trattamento>Cura dei Piedi. Ispezione quotidiana: Controllare i piedi ogni giorno per segni di lesioni, ulcere, arrossamenti o infezioni. Utilizzare uno specchio se necessario per esaminare le aree difficili da vedere. Igiene: Lavare i piedi quotidianamente con acqua tiepida e sapone delicato. Asciugare bene, specialmente tra le dita dei piedi, per prevenire infezioni fungine. Idratazione: Applicare una crema idratante sui piedi per mantenere la pelle morbida e prevenire screpolature. Evitare di applicare la crema tra le dita dei piedi per prevenire l&apos;accumulo di umidità e infezioni fungine. Gestione a Lungo Termine
+Follow-up regolari: Consultare regolarmente un podologo o un diabetologo per monitorare la salute del piede e prevenire complicanze. Modifiche dello stile di vita: Adottare uno stile di vita sano, che includa una dieta equilibrata e l’esercizio fisico, per migliorare la salute generale e la gestione del diabete.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_retinopatia_diabetica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_retinopatia_diabetica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_retinopatia_diabetica"/>
+        <descrizione_trattamento>Trattamenti Non Chirurgici: Fotocoagulazione con laser: Questa procedura utilizza un laser per trattare i vasi sanguigni anormali nella retina. Esistono due tipi principali: Laser per la retinopatia proliferativa: Riduce la crescita di nuovi vasi sanguigni anormali. Laser per l&apos;edema maculare: Riduce l&apos;accumulo di liquido nella macula (la parte centrale della retina responsabile della visione dettagliata). Trattamenti Chirurgici
+Vitrectomia: Questa chirurgia è utilizzata per rimuovere il gel vitreo (il gel che riempie l&apos;occhio) e il sangue che può essere accumulato nella retina a causa di emorragie. Viene eseguita nei casi avanzati di retinopatia diabetica, specialmente quando c&apos;è un distacco della retina o una proliferazione di tessuto cicatriziale.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_sindrome_ovaio_policistico -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_sindrome_ovaio_policistico">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_sindrome_ovaio_policistico"/>
+        <descrizione_trattamento>Trattamenti Ormonali: Contraccettivi orali: Le pillole anticoncezionali possono aiutare a regolare il ciclo mestruale, ridurre i livelli di androgeni e migliorare l&apos;acne e la crescita eccessiva dei peli. Alcuni contraccettivi orali combinati contengono estrogeni e progestinici. Progestinici: Se la paziente non può assumere estrogeni, il medico può prescrivere solo progestinici per indurre le mestruazioni e ridurre l&apos;iperplasia endometriale. Spirale contraccettiva (IUD) con rilascio di progesterone: Può aiutare a regolare il ciclo mestruale e ridurre i sintomi della PCOS. Trattamenti per l&apos;Infertilità
+Clomifene citrato: Un farmaco che stimola l&apos;ovulazione, spesso utilizzato per aiutare le donne con PCOS a concepire. Metformina: Un farmaco per il diabete che può aiutare a migliorare la sensibilità all&apos;insulina e promuovere l&apos;ovulazione. Può essere utilizzato in combinazione con clomifene citrato. Gonadotropine: Iniezioni di ormoni che stimolano le ovaie a produrre uova, utilizzate se il clomifene citrato non è efficace. Fertilizzazione in vitro (IVF): In caso di problemi di fertilità persistenti, l&apos;IVF può essere una soluzione.</descrizione_trattamento>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_steatosi_epatica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#istanza_trattamento_steatosi_epatica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/user/ontologies/2022/0/untitled-ontology-7#trattamento_steatosi_epatica"/>
+        <descrizione_trattamento>Trattamenti Farmacologici: Attualmente non ci sono farmaci specifici approvati esclusivamente per la steatosi epatica non alcolica (NAFLD), ma alcuni possono essere utilizzati in casi specifici. Farmaci per il diabete: Oltre alla metformina, altri farmaci come i GLP-1 agonisti (es. Liraglutide) possono essere utilizzati per migliorare la funzione epatica e la composizione corporea. Farmaci per il colesterolo: Statine e altri farmaci possono essere prescritti per gestire i livelli lipidici. Monitoraggio e Follow-up Esami regolari: Monitorare regolarmente la funzione epatica tramite esami del sangue e, se necessario, ecografie o altre indagini diagnostiche. Visite specialistiche: Consultare periodicamente un gastroenterologo o un epatologo per valutare la progressione della malattia e l&apos;efficacia delle terapie.</descrizione_trattamento>
     </owl:NamedIndividual>
     
 
