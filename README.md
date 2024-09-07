@@ -12,4 +12,5 @@ Il progetto è stato realizzato da:
 La versione di python utilizzata è 'python 3.9'.  
 Per installare le librerie da terminale: `pip install -r requirements.txt`  
 Esecuzione dei classificatori: `python main_modello.py`  
-Esecuzione dell'agente basato su regole: `python esperto_diabete.py `
+Esecuzione dei classificatori con k-fold cross-validation: `python main_kfold.py`  
+Esecuzione dell'agente basato su regole: `python esperto_diabete.py`

@@ -18,12 +18,6 @@ class diabetes_data:
     def get_data(self):
         return self.data
 
-    def get_features(self):
-        return self.features_list
-
-    def get_heatmap(self):
-        heatmap(self.data.corr(), annot=True)
-        plt.show()
 
     def plot_diabetes(self):
         plt.style.use("ggplot")
@@ -42,19 +36,6 @@ class diabetes_data:
                     list_ages.append(label)
         pd.DataFrame(list_ages).value_counts().plot.bar(
             title='Ages', rot=0)
-        plt.show()
-
-    def plot_BMI(self):
-        plt.style.use("ggplot")
-        list_BMI = []
-
-        for bmi in self.data["bmi"]:
-            for b in range(0,70,10):
-                if bmi >= b and b <=(bmi+9):
-                    label = "%d-%d"%(b,(b+9))
-                    list_BMI.append(label)
-        pd.DataFrame(list_BMI).value_counts().plot.bar(
-            title='BMI', rot=0)
         plt.show()
 
     def get_training_data(self):

@@ -5,10 +5,8 @@ from modello import *
 data = diabetes_data()
 default_test_size = 0.5
 
-#data.get_heatmap()
 data.plot_diabetes()
 data.plot_ages()
-#data.plot_BMI()
 
 # logisitc regression to predict diabetes
 model_1 = diabetes_logistic_regression(data, 100, default_test_size)

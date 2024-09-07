@@ -99,9 +99,38 @@ class diabetes_ontology:
         return dict_nums_malattie_correlate, dict_nums_keys_malattie_correlate
 
 
+
     def trattamenti(self):
+        # Prendi l'input dell'utente per il nome del trattamento
+        response = "trattamento " + str(input().lower())
         
-        response = str(input())
+        
+        # Trova tutti gli individui dell'ontologia
+        for individuo in self.ontology.individuals():
+            # Verifica se l'individuo ha un nome simile alla risposta
+            nom = individuo.name
+            nome_individuo = individuo.name.replace('_', ' ').lower()
+            
+
+            if response in nome_individuo:               
+                # Cerca la proprietà 'descrizione_trattamento' dell'individuo
+                if hasattr(individuo, 'descrizione_trattamento'):
+                    
+                    target = getattr(self.ontology, nom).descrizione_trattamento  
+                    print(target)
+                else:
+                    print(f"Nessuna descrizione del trattamento disponibile per {nome_individuo}")
+                return
+        
+        # Se nessun trattamento è stato trovato
+        print("Non esiste malattia correlata con questo nome\n")
+
+
+
+    #Versione diretta della funzione trattamenti(inutile al momento)
+    def trattamenti2(self):
+        
+        response = str(input()).lower()
         
        
                 
@@ -149,8 +178,7 @@ class diabetes_ontology:
             target = self.ontology.istanza_trattamento_nefropatia_diabetica.descrizione_trattamento     
             print(target)  
             
-            
-            
+                       
         elif response == ("neuropatia diabetica"):          
             target = self.ontology.istanza_trattamento_neuropatia_diabetica.descrizione_trattamento     
             print(target)  
@@ -179,11 +207,8 @@ class diabetes_ontology:
             print("Non esiste malattia correlata con questo nome\n")
             
 
-
-
-
-
-
+        
+    
 
 
 

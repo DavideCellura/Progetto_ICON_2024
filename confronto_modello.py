@@ -141,6 +141,7 @@ def comparison_metrics_models(data: diabetes_data, test_size: float):
     model_3 = diabetes_knn(data, test_size, 21)
     model_3.predict()
 
+
     a, graph_lr = plt.subplots(2, 2)
     a.tight_layout(pad=4.0)
 
@@ -157,7 +158,6 @@ def comparison_metrics_models(data: diabetes_data, test_size: float):
         "Accurancy"), "K-Nearest-Neighbor": model_3.get_metric("Accurancy")}
 
     models_names = list(precision_data_dict.keys())
-
     models_precision_data = list(precision_data_dict.values())
     models_recall_data = list(recall_data_dict.values())
     models_f1_data = list(f1_data_dict.values())

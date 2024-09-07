@@ -302,9 +302,7 @@ def trattamenti_malattie():
    
     do.trattamenti()
 
-    #while trattamenti not in :
-       # print("\nScrivi il nome della malattia correlata di cui vuoi sapere i possibili trattamenti")
-        #trattamenti = int(input())
+   
 
 
 
