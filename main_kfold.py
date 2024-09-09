@@ -1,8 +1,15 @@
 import numpy as np
 from sklearn.model_selection import *
-
 from confronto_modello import *
 from modello import *
+import numpy as np
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.model_selection import RandomizedSearchCV, KFold
+from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score, confusion_matrix, ConfusionMatrixDisplay
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
+from scipy.stats import randint
+
 
 data = diabetes_data()
 std_list=[]
@@ -12,7 +19,30 @@ X = data.get_data().drop('diabetes', axis='columns').values
 Y = data.get_data()['diabetes'].values
 
 
-# logisitc regression to predict diabetes
+# Imposta la griglia di iperparametri
+param_grid = {
+    'C': [0.01, 0.1, 1, 10],           # Diversi valori per il parametro di regolarizzazione
+    'penalty': ['l1', 'l2'],                # Proviamo sia L1 che L2 (tipo regolarizazione)
+    'solver': ['liblinear', 'saga'],        # Solver che supportano L1 e L2 (Algoritmo di ottimizazione)
+}
+
+# Dichiara il modello di regressione logistica
+logistic_model = LogisticRegression(max_iter=5000)
+
+grid_search = GridSearchCV(estimator=logistic_model, param_grid=param_grid, 
+                           cv=5, n_jobs=-1, scoring='accuracy', verbose=1)
+
+
+# Esegui la Grid Search sull'intero dataset
+grid_search.fit(X, Y)
+
+
+# Migliori iperparametri trovati dalla Grid Search
+best_params = grid_search.best_params_
+best_model = grid_search.best_estimator_
+
+print(f"Migliori iperparametri trovati dalla Grid Search per Logistic Regression:\n {best_params}\n")
+
 
 # Liste per memorizzare le metriche
 logistic_regression_accuracy_scores = []
@@ -24,13 +54,9 @@ logistic_regression_confusion_matrices = []
 #Divido il dataset con la Kfold
 kf_logistic = KFold(n_splits=5, shuffle=True, random_state=42)
 
-# Esegui la K-Fold Cross Validation
-logistic_model = LogisticRegression(max_iter=1000)
-
-#scores = cross_val_score(logistic_model, X, Y, cv=kf_logistic)
 
 nfold = 1 
-print("Logistic Regression")
+print("Logistic Regression ottimizato con Grid Search")
 
 # Ciclo su ogni fold
 for train_index, test_index in kf_logistic.split(X):
@@ -40,15 +66,16 @@ for train_index, test_index in kf_logistic.split(X):
     X_train, X_test = X[train_index], X[test_index]
     y_train, y_test = Y[train_index], Y[test_index]
 
+    # Standardizza i dati
     scaler = StandardScaler()
     x_train_scaled=scaler.fit_transform(X_train)
     x_test_scaled=scaler.fit_transform(X_test)
 
-    # Allena il modello
-    logistic_model.fit(x_train_scaled ,  y_train)
+    # Allena il miglior modello trovato dalla Grid Search
+    best_model.fit(x_train_scaled, y_train)
 
     # Fai le previsioni
-    y_pred = logistic_model.predict(x_test_scaled)
+    y_pred = best_model.predict(x_test_scaled)
 
     # Calcola le metriche
     accuracy = accuracy_score(y_test, y_pred)
@@ -125,6 +152,32 @@ print("\n\n")
 # decision tree to predict diabetes
 
 
+
+decision_model = tree.DecisionTreeClassifier(max_depth=42)
+
+# Definizione della distribuzione casuale di iperparametri
+param_dist = {
+    'max_depth': randint(3, 100),#(Profondità massima dell'albero)
+    'min_samples_split': randint(2, 20),#(Minimo numero di campioni per effettuare uno split)
+    'min_samples_leaf': randint(1, 10),#(Minimo numero di campioni in una foglia)
+    'max_leaf_nodes': randint(10, 100),#(Numero massimo di nodi foglia)
+    'criterion': ['gini', 'entropy'],#(Numero massimo di caratteristiche considerate per lo split)
+}
+
+# Definizione di Randomized Search con cross-validation
+random_search = RandomizedSearchCV(estimator=decision_model, param_distributions=param_dist, n_iter=50, cv=5, scoring='accuracy', random_state=42)
+
+# Esegui la Randomized Search
+random_search.fit(X, Y)
+
+# Migliori iperparametri trovati
+best_params = random_search.best_params_
+print("Migliori iperparametri trovati dalla Randomized Search per Decision Tree:\n", best_params)
+
+# Ora possiamo usare i migliori iperparametri trovati nella K-Fold Validation
+best_decision_model = DecisionTreeClassifier(**best_params)
+
+
 # Liste per memorizzare le metriche
 decision_tree_accuracy_scores = []
 decision_tree_precision_scores = []
@@ -134,10 +187,8 @@ decision_tree_confusion_matrices = []
 
 kf_decision = KFold(n_splits=5, shuffle=True, random_state=42)
 
-decision_model = tree.DecisionTreeClassifier(max_depth=100)
-
 nfold = 1 
-print("\nDecision Tree")
+print("\nDecision Tree ottimizzato con Randomized Search")
 
 for train_index, test_index in kf_decision.split(X):
 
@@ -149,11 +200,11 @@ for train_index, test_index in kf_decision.split(X):
     x_train_scaled=scaler.fit_transform(X_train)
     x_test_scaled=scaler.fit_transform(X_test)
 
-    # Allena il modello
-    decision_model.fit(x_train_scaled ,  y_train)
+    # Allena il modello con i migliori iperparametri
+    best_decision_model.fit(x_train_scaled, y_train)
 
     # Fai le previsioni
-    y_pred = decision_model.predict(x_test_scaled)
+    y_pred = best_decision_model.predict(x_test_scaled)
 
     # Calcola le metriche
     accuracy = accuracy_score(y_test, y_pred)
@@ -224,6 +275,26 @@ print("\n\n")
 
 # knn to predict diabetes
 
+
+# Definisci lo spazio degli iperparametri da esplorare con Random Search
+param_dist = {
+    'n_neighbors': np.arange(1, 10),
+    'weights': ['uniform', 'distance'],
+    'p': [1, 2],  # Parametro per la distanza Minkowski: 1 = distanza di Manhattan, 2 = distanza Euclidea
+    'algorithm': ['auto','kd_tree']  # Algoritmi per la ricerca dei vicini
+}
+
+knn_model = KNeighborsClassifier()
+
+# Randomized Search con 50 iterazioni, 5-fold cross validation
+random_search = RandomizedSearchCV(knn_model, param_distributions=param_dist, n_iter=50, cv=5, random_state=42, n_jobs=-1)
+
+# Fitting dei dati (con Randomized Search)
+random_search.fit(X, Y)
+
+# Migliori parametri trovati
+print(f"Migliori iperparametri trovati con la Random Search per Knn:\n {random_search.best_params_}")
+
 # Liste per memorizzare le metriche
 knn_accuracy_scores = []
 knn_precision_scores = []
@@ -233,10 +304,12 @@ knn_confusion_matrices = []
 
 kf_knn = KFold(n_splits=5, shuffle=True, random_state=42)
 
-knn_model = KNeighborsClassifier(n_neighbors=50)
+# Usa il modello KNN con i migliori iperparametri trovati
+best_knn_model = random_search.best_estimator_
+
 
 nfold = 1 
-print("\nKnn")
+print("\nKnn ottimizzato con Randomized Search")
 
 for train_index, test_index in kf_knn.split(X):
 
@@ -248,11 +321,11 @@ for train_index, test_index in kf_knn.split(X):
     x_train_scaled=scaler.fit_transform(X_train)
     x_test_scaled=scaler.fit_transform(X_test)
 
-    # Allena il modello
-    knn_model.fit(x_train_scaled ,  y_train)
+   # Allena il modello con i migliori iperparametri
+    best_knn_model.fit(x_train_scaled, y_train)
 
     # Fai le previsioni
-    y_pred = knn_model.predict(x_test_scaled)
+    y_pred = best_knn_model.predict(x_test_scaled)
 
     # Calcola le metriche
     accuracy = accuracy_score(y_test, y_pred)
